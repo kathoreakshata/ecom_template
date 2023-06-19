@@ -34,10 +34,10 @@
                 <hr>
                 <div class="add_new_user hide">
                     <h4 class="mb"><i class="fa fa-angle-right"></i>Add New User</h4>
-                    <form lass="form-horizontal style-form"
+                    <form class="form-horizontal style-form"
                           method="post">
                         <div class="form-group">
-                            <label for=""
+                            <label for="username"
                                    class="col-sm-2 col-sm-2 control-label">User Name: </label>
                             <div class="col-sm-10">
                                 <input id="username"
@@ -50,7 +50,7 @@
                         </div>
                         <br style="clear: both;">
                         <div class="form-group">
-                            <label for=""
+                            <label for="useremail"
                                    class="col-sm-2 col-sm-2 control-label">Email: </label>
                             <div class="col-sm-10">
                                 <input id="useremail"
@@ -63,7 +63,7 @@
                         </div>
                         <br style="clear: both;">
                         <div class="form-group">
-                            <label for=""
+                            <label for="password"
                                    class="col-sm-2 col-sm-2 control-label">Password: </label>
                             <div class="col-sm-10">
                                 <input id="password"
@@ -76,7 +76,7 @@
                         </div>
                         <br style="clear: both;;">
                         <div class="form-group">
-                            <label for=""
+                            <label for="password_confirm"
                                    class="col-sm-2 col-sm-2 control-label">Confirm Password: </label>
                             <div class="col-sm-10">
                                 <input id="password_confirm"

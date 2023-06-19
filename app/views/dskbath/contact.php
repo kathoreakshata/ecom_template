@@ -4,7 +4,8 @@
     input {
         margin: 1vh 0;
     }
-    .contact-info{
+
+    .contact-info {
         display: grid;
         place-items: center;
     }
@@ -31,7 +32,8 @@
 
 <body>
     <div>
-        <img style="width: 100%;" src="<?= ASSETS . THEME ?>\images\contact\contact.jpeg" alt="contact.jpeg" class="img-fluid">
+        <img style="width: 100%;" src="<?= ASSETS . THEME ?>\images\contact\contact.jpeg" alt="contact.jpeg"
+            class="img-fluid">
     </div>
     <div class="container-fluid" style="height: 10vh; <!-- Add background image -->">
         <h1 class="text-center display-2" style="color: rgb(60, 183, 186)">Contact Us</h1>
@@ -39,10 +41,10 @@
     <section class="contact-section">
         <div class="container">
             <div class="row">
-                <div class="col-lg-5 col-md-12 contact-info" style="margin-right: 45px;">                    
+                <div class="col-lg-5 col-md-12 contact-info" style="margin-right: 45px;">
                     <div class="contact-info-list">
-                    <span class="display-4 px-2"
-                        style="color:#ffffff; background-color:#24bcbd;">Get in Tocuh with us</span>
+                        <span class="display-4 px-2" style="color:#ffffff; background-color:#24bcbd;">Get in Tocuh with
+                            us</span>
                         <ul style="list-style: none; margin: 0; padding: 0;">
                             <li class=""
                                 style="position: relative; display: block; margin-bottom: 20px; border-bottom:solid rgb(36, 188, 189);">
@@ -70,43 +72,49 @@
                         </ul>
                     </div>
                 </div>
+
                 <div class="col p-5 contact-form"
                     style="box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;background-color: rgba(238,238,238,255);;border-top: 15px solid rgb(36, 188, 189);">
-                    <span class="display-4 px-2 py-2" style="color:#ffffff; background-color:#24bcbd;">Send a
-                        Message</span>
-                    <div class="row pt-4">
-                        <div class="col-lg-4 col-md-4 col-sm-12">
-                            <input type="text" id="fname" class="form-control" placeholder="First name"
-                                aria-label="First name" required autofocus>
+                    <form action="mailfunction.php" method="post" role="form">
+                        <span class="display-4 px-2 py-2" style="color:#ffffff; background-color:#24bcbd;">Send a
+                            Message</span>
+                        <div class="row pt-4">
+                            <div class="col-lg-4 col-md-4 col-sm-12">
+                                <input type="text" id="fname" name="fname" class="form-control" placeholder="First name"
+                                    aria-label="First name" required autofocus>
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-sm-12">
+                                <input type="text" id="lname" name="lname" class="form-control" placeholder="Last name"
+                                    aria-label="Last name" required>
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-sm-12">
+                                <input type="phone" id="phone" name="phone" class="form-control"
+                                    placeholder="Contact Number" aria-label="Contact Number" required>
+                            </div>
                         </div>
-                        <div class="col-lg-4 col-md-4 col-sm-12">
-                            <input type="text" id="lname" class="form-control" placeholder="Last name"
-                                aria-label="Last name" required>
+                        <div class="row">
+                            <div class="col-lg-4 col-md-4 col-sm-12">
+                                <input type="text" id="city" name="city" class="form-control" placeholder="City"
+                                    aria-label="City">
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-sm-12">
+                                <input type="email" id="email" name="email" class="form-control" placeholder="Email"
+                                    aria-label="Email" required>
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-sm-12">
+                                <input type="text" id="subject" name="subject" class="form-control"
+                                    placeholder="Subject" aria-label="Subject">
+                            </div>
                         </div>
-                        <div class="col-lg-4 col-md-4 col-sm-12">
-                            <input type="phone" id="phone" class="form-control" placeholder="Contact Number"
-                                aria-label="Contact Number" required>
+                        <div class="mb-3">
+                            <textarea class="form-control" id="message" name="message" rows="8" placeholder="Message"
+                                required></textarea>
                         </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-lg-4 col-md-4 col-sm-12">
-                            <input type="text" id="city" class="form-control" placeholder="City" aria-label="City">
-                        </div>
-                        <div class="col-lg-4 col-md-4 col-sm-12">
-                            <input type="email" id="email" class="form-control" placeholder="Email" aria-label="Email"
-                                required>
-                        </div>
-                        <div class="col-lg-4 col-md-4 col-sm-12">
-                            <input type="text" id="subject" class="form-control" placeholder="Subject"
-                                aria-label="Subject">
-                        </div>
-                    </div>
-                    <div class="mb-3">
-                        <textarea class="form-control" id="message" rows="8" placeholder="Message" required></textarea>
-                    </div>
-                    <button onclick="collect_data(event)" type="submit" class="btn"
-                        style="background-color: rgb(60, 183, 186); color: white;">Send</button>
+                        <button onclick="collect_data(event)" type="submit" class="btn"
+                            style="background-color: rgb(60, 183, 186); color: white;">Send</button>
+                    </form>
                 </div>
+
             </div>
         </div>
     </section>
@@ -122,7 +130,7 @@
     </div>
 
     <script>
-        function collect_data(e) {
+        function collect_data(event) {
             var fname_input = document.querySelector("#fname");
             if (fname_input.value.trim() == "" || !isNaN(fname_input.value.trim())) {
                 alert("Please Enter a Valid First Name");

@@ -90,6 +90,37 @@
     color: #f00;
   }
 
+  .whatsapp button {
+    color: #fff;
+    background: #2ebd5a;
+    font-size: 1.5rem !important;
+    border-radius: 100px;
+    width: 50px;
+    height: 50px;
+    border: 0;
+    cursor: pointer;
+    transition: all 0.4s ease-in-out;
+    display: block;
+    right: 20px;
+    bottom: 20px;
+    position: fixed;
+  }
+
+  .top button {
+    color: #fff;
+    background: #27bdbe;
+    font-size: 1.5rem !important;
+    border-radius: 100px;
+    width: 50px;
+    height: 50px;
+    border: 0;
+    cursor: pointer;
+    transition: all 0.4s ease-in-out;
+    display: block;
+    right: 20px;
+    bottom: 80px;
+    position: fixed;
+  }
 
   @media only screen and (max-width: 1200px) {
     .footer-cat {
@@ -181,6 +212,16 @@
     <a class="text-black" href="<?= ROOT ?>"><b>DSKBath.com</b></a>
   </div>
   <!-- Copyright -->
+
+  <!-- Whatsapp -->
+  <div class="d-block">
+    <a href="https://wa.me/7021632636" class="whatsapp">
+      <button class="bi bi-whatsapp"></button>
+    </a>
+    <a href="#" class="top">
+      <button class="bi bi-chevron-up"></button>
+    </a>
+  </div>
 </footer>
 <!-- Footer -->
 

@@ -113,7 +113,7 @@
 
     .pro-img-details img {
         margin-top: 5vh;
-        border: 10px solid rgb(60, 183, 186);
+        /* border: 2px solid rgb(60, 183, 186); */
     }
 
     .pro-d-title {
@@ -191,13 +191,14 @@
                 <div class="panel-body">
                     <h1 class="text-center display-2" style="color: rgb(60, 183, 186);">Product Details | <?=$ROW->name?></h1>
                     <div class="row">
-                        <div class="col-lg-10 col-md-12 text-center">
+                        <div class="col-lg-8 col-md-12 text-center">
                             <div class="pro-img-details">
                                 <img src="<?= ROOT . $ROW->image ?>"
-                                     alt="dsk bath product" class="img-fluid">
+                                     alt="dsk bath product" class="img-fluid"
+                                     style="height: 80vh; object-fit:contain;">
                             </div>
                         </div>
-                        <div class="col-lg-2 col-md-12 mt-5">
+                        <div class="col-lg-4 col-md-12 mt-5">
                             <h2 class="display-5"><?= $ROW->name;?></h2>
                             <p class="text-muted"><?= $ROW->description ?></p>
                             <p class="text-muted">SKU: <?= $ROW->sku ?></p>
@@ -245,7 +246,7 @@
                 <div class="row justify-content-start">
                     <?php foreach($related_products as $related_product): ?>
                         <!-- Single Product -->
-                        <div class="col-lg-3 col-md-6 col-sm-12" style="border: 5px solid rgb(60, 183, 186); margin: 1vh;">
+                        <div class="col-lg-3 col-md-6 col-sm-12" style="border: 2px solid rgb(60, 183, 186); margin: 1vh;">
                             <a href="<?= ROOT . "product_detail/" ?><?= $related_product->slug ?>" class="text-decoration-none">
                                 <div id="product-1" class="single-product">
                                     <div class="part-1">
